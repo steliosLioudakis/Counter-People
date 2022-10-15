@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://raw.githack.com/eKoopmans/html2pdf/master/dist/html2pdf.bundle.js"></script>
+    <title>Counter</title>
+</head>
+
+<body>
+    <div id="conteiner">
+        <h1>People entered:</h1>
+        <h2 id="count-id">0</h2>
+        <div class="frameSave">
+            <div class="frame">
+                <button id="increment-btn" onclick="increment()">INCREMENT + 1</button>
+                <button id="decrease-btn" onclick="decrease()">DECREASE - 1</button>
+                <button id="reset-btn" onclick="reset()">RESET TO 0</button>
+            </div>
+            <button id="save-btn" onclick="save();">SAVE</button>
+        </div>
+        <div class="date">
+            <label id="dateLabel" for="">Date:</label>
+            <input id="date" type="date" id="birthday" name="birthday" required>
+        </div>
+        <div class="shift">
+            <label id="shiftLabel" for="name">Shift Person:</label>
+            <select name="shift" id="name" required>
+                <option value="0">--</option>
+                <option value="1">Nick Johnson</option>
+                <option value="2">Jack Miller</option>
+                <option value="3">Jonny Evans</option>
+                <option value="4">George Russell</option>
+                <option value="5">Martha Jane</option>
+            </select>
+        </div>
+        <p id="prevEntries-id">Previous entries: </p>
+        <!-- <p id="sumEntries">Total entries: </p> -->
+        <div>
+            <button id="shift-btn" onclick="shift(); resetDate(); resetName();">NEW SHIFT</button>
+            <button id="export" onclick="generatePDF()">Export to PDF</button>
+        </div>
+    </div>
+
+    <script src="index.js"></script>
+    <script src="https://raw.githack.com/eKoopmans/html2pdf/master/dist/html2pdf.bundle.js"></script>
+
+</body>
+
+</html>
